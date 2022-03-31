@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="LSHash fine">
+      <change afterPath="$PROJECT_DIR$/ltr/models/loss/matcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ltr/models/neck/featurefusion_network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ltr/models/neck/position_encoding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/resnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/resnet18_vggm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/transt_backbone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/transt/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/transt/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/transt/transt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/INSTALL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/INSTALL_win.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODEL_ZOO.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/update_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/update_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/updater/cluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/updater/cluster.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/admin/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/admin/loading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/functional.py" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/functional.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.c" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.h" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/analysis/plot_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/analysis/plot_results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/lasotdataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/lasotdataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/votdataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/votdataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/features/net_wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/features/net_wrappers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/notebooks/analyze_results.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/models/neck/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/atom_gmm_sampl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/atom_prob_ml.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/default.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/default_vot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/multiscale_no_iounet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/dimp/dimp18.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/parameter/dimp/dimp18.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/dimp_simple/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/dimp_simple/super_dimp_simple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/eco/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/eco/default.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/eco/mobile3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/kys/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/kys/default.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/kys/default_vot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/lwl/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/lwl/lwl_boxinit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/lwl/lwl_ytvos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/run_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/run_tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/atom/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/atom/atom.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/atom/optim.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/base/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/tracker/base/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/base/basetracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/tracker/base/basetracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/dimp/dimp.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/tracker/dimp/dimp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/dimp_simple/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/dimp_simple/dimp_simple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/eco/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/eco/eco.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/eco/optim.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/kys/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/kys/kys.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/lwl/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/tracker/lwl/lwl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/utils/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/utils/loading.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="JupyterTrust" id="c93dbda4-8b92-4158-97c4-937c5ade205b" />
+  <component name="ProjectId" id="26ef0e7QGqwHZgEZfx9l2qsLkbC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ltr/models" />
+    <property name="python.debugger.dataview.coloredbydefault" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models\loss" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models\backbone" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking\tracker\transt" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking\networks" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\train_settings" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models\loss" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models\backbone" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.run_tracker">
+    <configuration name="functional" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pytracking" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/functional.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot_results" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pytracking" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytracking/analysis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytracking/analysis/plot_results.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_tracker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pytracking" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pytracking" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pytracking/run_tracker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pytracking" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="update_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pytracking" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/models/update_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run_tracker" />
+        <item itemvalue="Python.plot_results" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.update_model" />
+        <item itemvalue="Python.functional" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="" />
+      <created>1647788750253</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647788750253</updated>
+      <workItem from="1647788754352" duration="3695000" />
+      <workItem from="1647832083464" duration="437000" />
+      <workItem from="1647833193252" duration="10161000" />
+      <workItem from="1647856300042" duration="126605000" />
+      <workItem from="1648609353898" duration="66527000" />
+    </task>
+    <task id="LOCAL-00001" summary="LSHash fine">
+      <created>1648701544269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648701544269</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="LSHash fine" />
+    <option name="LAST_COMMIT_MESSAGE" value="LSHash fine" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648714594694">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="440" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1549.831@0.0.1549.831" timestamp="1648714594694" />
+    <state width="1547" height="158" key="DebuggerActiveHint" timestamp="1648714266534">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1547" height="158" key="DebuggerActiveHint/0.0.1549.831@0.0.1549.831" timestamp="1648714266534" />
+    <state width="1496" height="130" key="GridCell.Tab.0.bottom" timestamp="1648717768892">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="130" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648717768892" />
+    <state width="1496" height="130" key="GridCell.Tab.0.center" timestamp="1648717768892">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="130" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1648717768892" />
+    <state width="1496" height="130" key="GridCell.Tab.0.left" timestamp="1648717768892">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="130" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1648717768892" />
+    <state width="1496" height="130" key="GridCell.Tab.0.right" timestamp="1648717768892">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="130" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1648717768892" />
+    <state width="1496" height="282" key="GridCell.Tab.1.bottom" timestamp="1648717387221">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="282" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648717387221" />
+    <state width="1496" height="282" key="GridCell.Tab.1.center" timestamp="1648717387221">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="282" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1648717387221" />
+    <state width="1496" height="282" key="GridCell.Tab.1.left" timestamp="1648717387221">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="282" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1648717387221" />
+    <state width="1496" height="282" key="GridCell.Tab.1.right" timestamp="1648717387221">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="1496" height="282" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1648717387221" />
+    <state x="95" y="0" key="SettingsEditor" timestamp="1647833201003">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="95" y="0" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1647833201003" />
+    <state x="267" y="84" key="Vcs.Push.Dialog.v2" timestamp="1648701554582">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="267" y="84" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1648701554582" />
+    <state width="781" height="422" key="XDebugger.FullValuePopup" timestamp="1648696156450">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state width="781" height="422" key="XDebugger.FullValuePopup/0.0.1549.831@0.0.1549.831" timestamp="1648696156450" />
+    <state x="538" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1648461434139">
+      <screen x="0" y="0" width="1549" height="831" />
+    </state>
+    <state x="538" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1549.831@0.0.1549.831" timestamp="1648461434139" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ltr/models/tracking/transt.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pytracking$test.coverage" NAME="test Coverage Results" MODIFIED="1648696391868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pytracking$update_model.coverage" NAME="update_model Coverage Results" MODIFIED="1648655271417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/models" />
+    <SUITE FILE_PATH="coverage/pytracking$functional.coverage" NAME="functional Coverage Results" MODIFIED="1647789297822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool" />
+    <SUITE FILE_PATH="coverage/pytracking$run_tracker.coverage" NAME="run_tracker Coverage Results" MODIFIED="1648717768888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking" />
+    <SUITE FILE_PATH="coverage/pytracking$plot_results.coverage" NAME="plot_results Coverage Results" MODIFIED="1648699914036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking/analysis" />
+  </component>
+</project>
