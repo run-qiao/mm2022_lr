@@ -10,73 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="LSHash fine">
-      <change afterPath="$PROJECT_DIR$/ltr/models/loss/matcher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ltr/models/neck/featurefusion_network.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ltr/models/neck/position_encoding.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/resnet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/resnet18_vggm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ltr/models/transt_backbone/transt_backbone.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytracking/tracker/transt/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytracking/tracker/transt/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytracking/tracker/transt/transt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INSTALL.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/INSTALL_win.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODEL_ZOO.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/update_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/update_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/updater/cluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/updater/cluster.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ltr/admin/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/admin/loading.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/functional.py" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/functional.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.c" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.h" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/analysis/plot_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/analysis/plot_results.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/datasets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/lasotdataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/lasotdataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/votdataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/votdataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/features/net_wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/features/net_wrappers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/notebooks/analyze_results.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/models/neck/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/atom_gmm_sampl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/atom_prob_ml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/default_vot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/atom/multiscale_no_iounet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/dimp/dimp18.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/parameter/dimp/dimp18.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/dimp_simple/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/dimp_simple/super_dimp_simple.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/eco/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/eco/default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/eco/mobile3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/kys/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/kys/default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/kys/default_vot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/lwl/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/lwl/lwl_boxinit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/parameter/lwl/lwl_ytvos.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/run_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/run_tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/atom/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/atom/atom.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/atom/optim.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/base/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/tracker/base/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/base/basetracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/tracker/base/basetracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/dimp/dimp.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/tracker/dimp/dimp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/dimp_simple/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/dimp_simple/dimp_simple.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/eco/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/eco/eco.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/eco/optim.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/kys/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/kys/kys.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/lwl/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/tracker/lwl/lwl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/utils/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/utils/loading.py" afterDir="false" />
+    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/_assets/prroi_visualization.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +47,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/ltr/models" />
     <property name="python.debugger.dataview.coloredbydefault" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -260,7 +200,8 @@
       <workItem from="1647832083464" duration="437000" />
       <workItem from="1647833193252" duration="10161000" />
       <workItem from="1647856300042" duration="126605000" />
-      <workItem from="1648609353898" duration="66527000" />
+      <workItem from="1648609353898" duration="67438000" />
+      <workItem from="1648724675493" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="LSHash fine">
       <created>1648701544269</created>
@@ -288,6 +229,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/ltr/external/PreciseRoIPooling" />
+    </ignored-roots>
     <MESSAGE value="LSHash fine" />
     <option name="LAST_COMMIT_MESSAGE" value="LSHash fine" />
   </component>
@@ -300,42 +244,42 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state width="1547" height="158" key="DebuggerActiveHint/0.0.1549.831@0.0.1549.831" timestamp="1648714266534" />
-    <state width="1496" height="130" key="GridCell.Tab.0.bottom" timestamp="1648717768892">
+    <state width="1496" height="282" key="GridCell.Tab.0.bottom" timestamp="1648724611842">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="130" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648717768892" />
-    <state width="1496" height="130" key="GridCell.Tab.0.center" timestamp="1648717768892">
+    <state width="1496" height="282" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648724611842" />
+    <state width="1496" height="282" key="GridCell.Tab.0.center" timestamp="1648724611841">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="130" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1648717768892" />
-    <state width="1496" height="130" key="GridCell.Tab.0.left" timestamp="1648717768892">
+    <state width="1496" height="282" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1648724611841" />
+    <state width="1496" height="282" key="GridCell.Tab.0.left" timestamp="1648724611841">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="130" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1648717768892" />
-    <state width="1496" height="130" key="GridCell.Tab.0.right" timestamp="1648717768892">
+    <state width="1496" height="282" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1648724611841" />
+    <state width="1496" height="282" key="GridCell.Tab.0.right" timestamp="1648724611841">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="130" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1648717768892" />
-    <state width="1496" height="282" key="GridCell.Tab.1.bottom" timestamp="1648717387221">
+    <state width="1496" height="282" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1648724611841" />
+    <state width="1496" height="282" key="GridCell.Tab.1.bottom" timestamp="1648724611842">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="282" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648717387221" />
-    <state width="1496" height="282" key="GridCell.Tab.1.center" timestamp="1648717387221">
+    <state width="1496" height="282" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648724611842" />
+    <state width="1496" height="282" key="GridCell.Tab.1.center" timestamp="1648724611842">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="282" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1648717387221" />
-    <state width="1496" height="282" key="GridCell.Tab.1.left" timestamp="1648717387221">
+    <state width="1496" height="282" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1648724611842" />
+    <state width="1496" height="282" key="GridCell.Tab.1.left" timestamp="1648724611842">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="282" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1648717387221" />
-    <state width="1496" height="282" key="GridCell.Tab.1.right" timestamp="1648717387221">
+    <state width="1496" height="282" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1648724611842" />
+    <state width="1496" height="282" key="GridCell.Tab.1.right" timestamp="1648724611842">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="282" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1648717387221" />
-    <state x="95" y="0" key="SettingsEditor" timestamp="1647833201003">
+    <state width="1496" height="282" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1648724611842" />
+    <state x="95" y="0" key="SettingsEditor" timestamp="1648724690101">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="95" y="0" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1647833201003" />
+    <state x="95" y="0" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1648724690101" />
     <state x="267" y="84" key="Vcs.Push.Dialog.v2" timestamp="1648701554582">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
@@ -344,10 +288,10 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state width="781" height="422" key="XDebugger.FullValuePopup/0.0.1549.831@0.0.1549.831" timestamp="1648696156450" />
-    <state x="538" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1648461434139">
+    <state x="538" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1648723939628">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="538" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1549.831@0.0.1549.831" timestamp="1648461434139" />
+    <state x="538" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1549.831@0.0.1549.831" timestamp="1648723939628" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -364,7 +308,7 @@
     <SUITE FILE_PATH="coverage/pytracking$test.coverage" NAME="test Coverage Results" MODIFIED="1648696391868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pytracking$update_model.coverage" NAME="update_model Coverage Results" MODIFIED="1648655271417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/models" />
     <SUITE FILE_PATH="coverage/pytracking$functional.coverage" NAME="functional Coverage Results" MODIFIED="1647789297822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool" />
-    <SUITE FILE_PATH="coverage/pytracking$run_tracker.coverage" NAME="run_tracker Coverage Results" MODIFIED="1648717768888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking" />
+    <SUITE FILE_PATH="coverage/pytracking$run_tracker.coverage" NAME="run_tracker Coverage Results" MODIFIED="1648724425867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking" />
     <SUITE FILE_PATH="coverage/pytracking$plot_results.coverage" NAME="plot_results Coverage Results" MODIFIED="1648699914036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking/analysis" />
   </component>
 </project>
