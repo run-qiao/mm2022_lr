@@ -98,7 +98,7 @@ def load_network(network_dir=None, checkpoint=None, constructor_fun_name=None, c
         net = net_constr.get()
     else:
         raise RuntimeError('No constructor for the given network.')
-    if 'transt' in network_dir:
+    if 'transt-extend' in network_dir:
         net.load_state_dict(checkpoint_dict['net'], strict=False)
     else:
         net.load_state_dict(checkpoint_dict['net'])

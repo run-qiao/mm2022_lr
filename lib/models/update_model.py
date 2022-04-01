@@ -37,7 +37,7 @@ class UPDATOR():
 
 		self.start_len = 20
 		self.start_interval = 2
-		self.update_interval = 20
+		self.update_interval = 40
 
 		self.vit.cuda()
 

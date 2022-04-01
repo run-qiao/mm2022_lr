@@ -11,7 +11,7 @@ from lshash.lshash import LSHash
 
 
 class KMeansCluster():
-    def __init__(self, start_len=15, feature_bank_size=100, score_bank_size=30, max_components=12, start_components=6):
+    def __init__(self, start_len=15, feature_bank_size=100, score_bank_size=30, max_components=12, start_components=6,main_cluster_num=5,cluster_thres=1.8):
 
         self.start_components = start_components
         self.features = []
@@ -24,6 +24,8 @@ class KMeansCluster():
         self.score_bank = deque([], maxlen=self.score_bank_size)
         self.pose_add_thres = 0.6
         self.refresh_thres = 0.7
+        self.cluster_thres=cluster_thres
+        self.main_cluster_num=main_cluster_num
         self.start_len = start_len
         self.pre_score = None
         self.cluster_class = None
@@ -54,10 +56,11 @@ class KMeansCluster():
         if self.cluster_class_is_init:
             if not isinstance(self.labels,list):
                 self.labels=self.labels.tolist()
-            self.labels.pop(1)
             if not isinstance(self.prob, list):
                 self.prob=self.prob.tolist()
-            self.prob.pop(1)
+            if len(self.labels)>1 and len(self.prob)>1:
+                self.labels.pop(1)
+                self.prob.pop(1)
 
 
     # return the id of feature
@@ -68,7 +71,7 @@ class KMeansCluster():
         self.compute_score(dist)
         convert_inx = (np.array(self.labels) == self.labels[-1])
         cluster_P = self.prob[convert_inx]
-        if len(cluster_P<1.8)>5:
+        if len(cluster_P<self.cluster_thres)>self.main_cluster_num:
             return np.array(self.ids)[convert_inx][np.argmin(cluster_P)]
         return -1
 
