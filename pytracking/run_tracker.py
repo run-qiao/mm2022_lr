@@ -38,7 +38,7 @@ def run_tracker(tracker_name, tracker_param, run_id=None, dataset_name='otb', se
 
 
 def main():
-
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
     parser = argparse.ArgumentParser(description='Run tracker on sequence or dataset.')
     parser.add_argument('--tracker_name', type=str, help='Name of tracking method.',default='transt')
     parser.add_argument('--tracker_param', type=str, help='Name of parameter file.',default='transt50')

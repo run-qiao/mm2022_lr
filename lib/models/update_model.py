@@ -5,6 +5,7 @@
 
 import torch
 import importlib
+import cv2
 from sklearn.decomposition import PCA
 from sklearn.manifold import LocallyLinearEmbedding
 from lshash.lshash import LSHash
@@ -12,6 +13,7 @@ from lshash.lshash import LSHash
 from .vit.vit import build_vit
 from .updater.cluster import build_cluster
 from .updater.vlad import build_vlad
+from .updater.register import build_register
 
 from lib.train.data.util.processing_utils import sample_target
 import lib.train.data.util.transforms as tfm
@@ -19,10 +21,11 @@ from lib.utils.image import *
 
 
 class UPDATOR():
-	def __init__(self, vit, vlad, cluster, process, update_thres=0.9):
+	def __init__(self, vit, vlad, cluster, register, process, score_thres_add=0.94, score_thres_update=0.98):
 		self.vit = vit
 		self.vlad = vlad
 		self.cluster = cluster
+		self.register = register
 		self.gt_template = None
 		self.gt_mask = None
 		self.pre_template = None
@@ -31,13 +34,16 @@ class UPDATOR():
 		self.pre_box = None
 		self.image_bank = []
 		self.box_bank = []
-		self.update_thres = update_thres
+		self.encode_bank = []
+		self.attmask_bank = []
+		self.score_thres_update = score_thres_update
+		self.score_thres_add = score_thres_add
 		self.process = process
 		self.count = 0
 
 		self.start_len = 20
 		self.start_interval = 2
-		self.update_interval = 50
+		self.update_interval = 10
 
 		self.vit.cuda()
 
@@ -45,30 +51,6 @@ class UPDATOR():
 		image, resize_factor, att_mask = sample_target(image, box, search_area_factor=2.0, output_sz=224)
 		image, att_mask = self.process(image=[image], att=[att_mask], joint=False)
 		return image[0].cuda(), att_mask[0].cuda()
-
-	def set_gt(self, image, box):
-		self.count = 1
-
-		self.vit.eval()
-		self.pre_image = image
-		self.pre_box = box
-
-		# crop the image and transform image to tensor
-		gt_template, att_mask = self._deal_image(image, box)
-
-		# record the image
-		self.gt_template = gt_template
-		self.gt_mask = att_mask
-		self.pre_template = gt_template
-		self.pre_mask = att_mask
-		_, gt_encode = self._encoder(self.gt_template, self.gt_mask)
-
-		# cluster init
-		self.cluster.set_gt(gt_encode)
-
-		# add to bank, put in last for _encoder_vlad
-		self.image_bank.append(self.pre_image)
-		self.box_bank.append(self.pre_box)
 
 	def _reduce_dim(self, x):
 
@@ -91,7 +73,6 @@ class UPDATOR():
 
 		return x
 
-
 	def _encoder(self, img, att_mask):
 
 		triple_images = torch.stack([self.gt_template, self.pre_template, img], dim=0).unsqueeze(0)
@@ -101,69 +82,113 @@ class UPDATOR():
 
 		return score, encode
 
+	def set_gt(self, image, box):
+		self.count = 1
+
+		self.vit.eval()
+		self.pre_image = image
+		self.pre_box = box
+
+		# crop the image and transform image to tensor
+		gt_template, att_mask = self._deal_image(image, box)
+
+		# record the image
+		self.gt_mask = att_mask
+		self.gt_template = gt_template
+		self.pre_mask = att_mask
+		self.pre_template = gt_template
+		_, gt_encode = self._encoder(self.gt_template, self.gt_mask)
+
+		# cluster init
+		self.cluster.set_gt(gt_encode)
+
+		# add to bank, put in last for _encoder_vlad
+		self.image_bank.append(self.pre_image)
+		self.box_bank.append(self.pre_box)
+		self.encode_bank.append(gt_encode)
+		self.attmask_bank.append(self.pre_mask)
+
 	def update(self, image, box):
 		self.count += 1
 
-		is_update=True
-
-		# if self.count >= 100 and self.count%80==0:
-		# 	self.visualize()
-
-
+		is_update = False
+		if self.count >= 100 and self.count%80==0:
+			self.visualize()
 
 		# less than start_len and in the start_interval
-		if self.count < self.start_len:
-			return None, None
-		if self.count % self.start_interval != 0:
+		if self.count < self.start_len and self.count % self.start_interval != 0:
 			return None, None
 		# more than start_len and in the update_interval
-		elif self.count % self.update_interval != 0:
-			is_update=False
-
+		elif self.count >= self.start_len and self.count % self.update_interval != 0:
+			return None, None
 
 		self.vit.eval()
 		template_img, att_mask = self._deal_image(image, box)
 		score, template_encode = self._encoder(template_img, att_mask)
 
-		if score >= self.update_thres:
+		if score >= self.score_thres_update and self.count >= self.start_len:
+			is_update = True
+
+		if score >= self.score_thres_add:
 			image_id = len(self.image_bank)
 
 			self.image_bank.append(image)
 			self.box_bank.append(box)
-			# 返回一个list
-			update_id_list = self.cluster.update(image_id, template_encode,is_update)
+			self.encode_bank.append(template_encode)
+			self.attmask_bank.append(att_mask)
 
+			update_id_list = self.cluster.update(image_id, template_encode, is_update)
+
+			# 调整 box
 			if update_id_list is not None:
-				self.pre_template = template_img
-				self.pre_mask = att_mask
-				self.pre_image = self.image_bank[update_id_list]
-				self.pre_box = self.box_bank[update_id_list]
+				print(update_id_list)
+
+			if is_update and update_id_list is not None:
+				encode_list = [self.encode_bank[i] for i in update_id_list[:-1]] + [template_encode]
+				att_mask_list = [self.attmask_bank[i] for i in update_id_list[:-1]] + [att_mask]
+				refine_box = self.register.refine(encode_list, att_mask_list, box)
+
+				# 调整box之后重新计算
+				refine_template, refine_att_mask = self._deal_image(image, refine_box)
+				refine_score, refine_template_encode = self._encoder(refine_template, refine_att_mask)
+
+				self.pre_template = refine_template
+				self.pre_mask = refine_att_mask
+				self.pre_image = image
+				self.pre_box = refine_box
+
+				self.box_bank[image_id] = refine_box
+				self.encode_bank[image_id] = refine_template_encode
+				self.attmask_bank[image_id] = refine_att_mask
+
+				# 重新放入cluster的bank里面
+				is_update = False
+				self.cluster.update(image_id, refine_template_encode, is_update)
+
 				return self.pre_image, self.pre_box
 
 		# return None if template not change
 		return None, None
 
 	def visualize(self):
-		ids,labels,prob = self.cluster.get_labels()
+		ids, labels, prob = self.cluster.get_labels()
 
 		ids = np.array(ids)
 		labels = np.array(labels)
-		prob=np.array(prob)
-		# print(len(ids), len(prob), len(labels))
-		if len(labels)==0 and len(prob)==0:
+		prob = np.array(prob)
+
+		if len(labels) == 0 and len(prob) == 0:
 			return
-		for i in range(12):
+		for i in range(9):
 			index = np.where(labels == i)
 			if len(index[0]) == 0:
 				continue
 			cluster_ids = ids[index]
-			cluster_probs=prob[index]
-			print('the cluster {} is {}:'.format(i,cluster_ids))
-			cluster_imgs = np.array(self.image_bank)[cluster_ids[cluster_probs<1.6]]/255.
-			cluster_boxes = np.array(self.box_bank)[cluster_ids[cluster_probs<1.6]]
+			cluster_probs = prob[index]
+			print('the cluster {} is {}:'.format(i, cluster_ids))
+			cluster_imgs = np.array(self.image_bank)[cluster_ids[cluster_probs < 1.6]] / 255.
+			cluster_boxes = np.array(self.box_bank)[cluster_ids[cluster_probs < 1.6]]
 			draw_seq_image(imgs=cluster_imgs, crop_boxes=cluster_boxes)
-
-
 
 
 def build_update_model(params):
@@ -179,15 +204,12 @@ def build_update_model(params):
 
 	vlad = build_vlad(cfg)
 	cluster = build_cluster(cfg)
+	register = build_register(cfg)
 	model = UPDATOR(
 		vit=vit,
 		vlad=vlad,
 		cluster=cluster,
-		process=process
+		process=process,
+		register=register
 	)
 	return model
-
-
-
-
-

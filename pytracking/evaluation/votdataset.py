@@ -59,12 +59,12 @@ class VOTDataset(BaseDataset):
 
     def _get_sequence_list(self):
         sequence_list= [
-                        'basketball',
                         'ants1',
                         'ants3',
                         'bag',
                         'ball1',
                         'ball2',
+                        'basketball',
                         'birds1',
                         'blanket',
                         'bmx',
