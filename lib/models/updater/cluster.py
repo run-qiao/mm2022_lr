@@ -1,6 +1,6 @@
 from sklearn.mixture import GaussianMixture
 from sklearn.cluster import KMeans
-
+from sklearn.decomposition import PCA
 from sklearn.datasets import make_blobs
 from sklearn.metrics import calinski_harabasz_score
 import numpy as np
@@ -30,6 +30,8 @@ class KMeansCluster():
         self.pre_score = None
         self.cluster_class = None
         self.cluster_class_is_init=False
+        # PCA
+        self.pca = PCA(n_components=50)
 
     def _create_class(self):
         return KMeans(n_clusters = self.start_components)
@@ -65,15 +67,18 @@ class KMeansCluster():
 
     # return the id of feature
     def _return_id(self):
-
-        dist=self.cluster_class.transform(self._features_to_tensor())
+        if len(self.ids)>self.pca.n_components:
+            x=self.pca.transform(self._features_to_tensor())
+        else:
+            x=self._features_to_tensor()
+        dist=self.cluster_class.transform(x)
         self.prob = np.zeros(len(dist))
         self.compute_score(dist)
         convert_inx = (np.array(self.labels) == self.labels[-1])
         cluster_P = self.prob[convert_inx]
         if len(cluster_P<self.cluster_thres)>self.main_cluster_num:
-            return np.array(self.ids)[convert_inx][np.argmin(cluster_P)]
-        return -1
+            return np.array(self.ids)[convert_inx][cluster_P<self.cluster_thres]
+        return None
 
 
     def compute_score(self,dist):
@@ -94,7 +99,7 @@ class KMeansCluster():
         feature = feature.flatten()
         self.ids.append(id)
         self.features.append(feature)
-        return_id = -1
+        return_id = None
         if is_update:
             # first fit, start_len == features length
             if len(self.features) >=self.start_len and not self.cluster_class_is_init:
@@ -110,37 +115,29 @@ class KMeansCluster():
             self._replace_bank()
         return return_id
 
-    def _refresh_bank(self):
-        score = calinski_harabasz_score(self._features_to_tensor(), self.labels)
-        # print(str(self.gmm.n_components) + ":" + str(score))
 
-        # deal with cluster score
-        if self.pre_score is None:
-            self.pre_score = score
-        else:
-            self.score_bank.append((score - self.pre_score) < 0)
-            self.pre_score = score
-            if len(self.score_bank) == self.score_bank_size and \
-                    sum(self.score_bank) / self.score_bank_size >= self.refresh_thres:
-                self._refresh_class()
-
-        # if score < self.pose_add_thres and self.gmm.n_components < self.max_components:
-        if score < self.pose_add_thres and self.cluster_class.n_clusters < self.max_components:
-            self.cluster_class.n_clusters += 1
-            self._refresh_class()
-
-    def _refresh_class(self):
-        self.labels = self.cluster_class.fit_predict(self._features_to_tensor())
+    def _refresh_class(self,x=None,visual_model=False):
+        if not self.cluster_class_is_init or visual_model:
+            if len(self.ids)>self.pca.n_components:
+                self.labels = self.cluster_class.fit_predict(self.pca.fit_transform(self._features_to_tensor()))
+            else:
+                self.labels = self.cluster_class.fit_predict(self._features_to_tensor())
+        elif x is not None:
+            self.labels = self.cluster_class.fit_predict(x)
 
     def _refresh_best(self):
         self.cluster_class.n_clusters=self.max_components
-        self._refresh_class()
-        score = calinski_harabasz_score(self._features_to_tensor(), self.labels)
+        if len(self.ids)>self.pca.n_components:
+            x=self.pca.fit_transform(self._features_to_tensor())
+        else:
+            x=self._features_to_tensor()
+        self._refresh_class(x)
+        score = calinski_harabasz_score(x, self.labels)
         cursor=self.max_components
         for i in range(self.start_components,self.max_components):
             self.cluster_class.n_clusters=i
-            self._refresh_class()
-            temp_score=calinski_harabasz_score(self._features_to_tensor(), self.labels)
+            self._refresh_class(x)
+            temp_score=calinski_harabasz_score(x, self.labels)
             if temp_score>score:
                 score=temp_score
                 cursor=i
@@ -148,15 +145,16 @@ class KMeansCluster():
             return
         else:
             self.cluster_class.n_clusters = cursor
-            self._refresh_class()
+            self._refresh_class(x)
             return
     def get_labels(self):
-        return self.ids, self.labels,self.prob
-
+        if len(self.ids)==len(self.labels):
+            return self.ids, self.labels,self.prob
+        else:
+            self._refresh_class(visual_model=True)
+            return self.ids,self.labels,np.ones_like(self.labels)
     def _features_to_tensor(self):
         return np.array(self.features)
-        # return np.array([item.cpu().detach().numpy() for item in self.features])
-        # return torch.Tensor([item.cpu().detach().numpy() for item in self.features]).cuda()
 
     def get_mixture_feature(self, X):
         return X.mean(0)

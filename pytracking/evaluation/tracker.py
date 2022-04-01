@@ -228,12 +228,14 @@ class Tracker:
 
             prev_output = OrderedDict(out)
 
-            _store_outputs(out, {'time': time.time() - start_time})
+
 
             if self.online_update:
                 new_gt_image, new_gt_box = self.update_model.update(image, out.get("target_bbox"))
                 if new_gt_image is not None and new_gt_box is not None:
                     tracker.initialize(new_gt_image, {'init_bbox':new_gt_box})
+
+            _store_outputs(out, {'time': time.time() - start_time})
 
             segmentation = out['segmentation'] if 'segmentation' in out else None
 

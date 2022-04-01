@@ -37,7 +37,7 @@ class UPDATOR():
 
 		self.start_len = 20
 		self.start_interval = 2
-		self.update_interval = 40
+		self.update_interval = 50
 
 		self.vit.cuda()
 
@@ -103,9 +103,10 @@ class UPDATOR():
 
 	def update(self, image, box):
 		self.count += 1
+
 		is_update=True
 
-		# if self.count >= 100 and self.count%30==0:
+		# if self.count >= 100 and self.count%80==0:
 		# 	self.visualize()
 
 
@@ -129,14 +130,14 @@ class UPDATOR():
 
 			self.image_bank.append(image)
 			self.box_bank.append(box)
+			# 返回一个list
+			update_id_list = self.cluster.update(image_id, template_encode,is_update)
 
-			update_id = self.cluster.update(image_id, template_encode,is_update)
-
-			if update_id > 0:
+			if update_id_list is not None:
 				self.pre_template = template_img
 				self.pre_mask = att_mask
-				self.pre_image = self.image_bank[update_id]
-				self.pre_box = self.box_bank[update_id]
+				self.pre_image = self.image_bank[update_id_list]
+				self.pre_box = self.box_bank[update_id_list]
 				return self.pre_image, self.pre_box
 
 		# return None if template not change
@@ -158,9 +159,9 @@ class UPDATOR():
 			cluster_ids = ids[index]
 			cluster_probs=prob[index]
 			print('the cluster {} is {}:'.format(i,cluster_ids))
-			# cluster_imgs = np.array(self.image_bank)[cluster_ids[cluster_probs<1.6]]/255.
-			# cluster_boxes = np.array(self.box_bank)[cluster_ids[cluster_probs<1.6]]
-			# draw_seq_image(imgs=cluster_imgs, crop_boxes=cluster_boxes)
+			cluster_imgs = np.array(self.image_bank)[cluster_ids[cluster_probs<1.6]]/255.
+			cluster_boxes = np.array(self.box_bank)[cluster_ids[cluster_probs<1.6]]
+			draw_seq_image(imgs=cluster_imgs, crop_boxes=cluster_boxes)
 
 
 

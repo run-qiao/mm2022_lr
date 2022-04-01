@@ -40,8 +40,8 @@ def run_tracker(tracker_name, tracker_param, run_id=None, dataset_name='otb', se
 def main():
 
     parser = argparse.ArgumentParser(description='Run tracker on sequence or dataset.')
-    parser.add_argument('--tracker_name', type=str, help='Name of tracking method.',default='keep_track')
-    parser.add_argument('--tracker_param', type=str, help='Name of parameter file.',default='default_fast')
+    parser.add_argument('--tracker_name', type=str, help='Name of tracking method.',default='transt')
+    parser.add_argument('--tracker_param', type=str, help='Name of parameter file.',default='transt50')
     parser.add_argument('--runid', type=int, default=None, help='The run id.')
     parser.add_argument('--dataset_name', type=str, default='vot', help='Name of dataset (otb, nfs, uav, tpl, vot, tn, gott, gotv, lasot).')
     parser.add_argument('--sequence', type=str, default=None, help='Sequence number or name.')
@@ -50,7 +50,7 @@ def main():
     parser.add_argument('--use_visdom', type=bool, default=False, help='Flag to enable visdom.')
     parser.add_argument('--visdom_server', type=str, default='127.0.0.1', help='Server for visdom.')
     parser.add_argument('--visdom_port', type=int, default=8097, help='Port for visdom.')
-    parser.add_argument('--online_update', type=bool, default=False, help='Start Online Update.')
+    parser.add_argument('--online_update', type=bool, default=True, help='Start Online Update.')
     args = parser.parse_args()
 
     try:
