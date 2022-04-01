@@ -10,15 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="hard fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/update_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/update_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/updater/cluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/updater/cluster.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ltr/admin/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/ltr/admin/loading.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/votdataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/votdataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/run_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/run_tracker.py" afterDir="false" />
-    </list>
+    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="pca decompose" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +195,7 @@
       <workItem from="1647856300042" duration="126605000" />
       <workItem from="1648609353898" duration="67438000" />
       <workItem from="1648724675493" duration="20514000" />
-      <workItem from="1648791573854" duration="5464000" />
+      <workItem from="1648791573854" duration="5898000" />
     </task>
     <task id="LOCAL-00001" summary="LSHash fine">
       <created>1648701544269</created>
@@ -226,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648777223109</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pca decompose">
+      <created>1648797677894</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648797677894</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +250,8 @@
     <MESSAGE value="LSHash fine" />
     <MESSAGE value="fix done" />
     <MESSAGE value="hard fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="hard fix" />
+    <MESSAGE value="pca decompose" />
+    <option name="LAST_COMMIT_MESSAGE" value="pca decompose" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648714594694">
@@ -298,10 +298,10 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="95" y="0" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1648724690101" />
-    <state x="249" y="95" key="Vcs.Push.Dialog.v2" timestamp="1648777230064">
+    <state x="249" y="95" key="Vcs.Push.Dialog.v2" timestamp="1648797683990">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="249" y="95" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1648777230064" />
+    <state x="249" y="95" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1648797683990" />
     <state width="781" height="422" key="XDebugger.FullValuePopup" timestamp="1648696156450">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
