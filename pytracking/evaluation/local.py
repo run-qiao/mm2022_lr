@@ -11,13 +11,13 @@ def local_env_settings():
     settings.got_reports_path = ''
     settings.lasot_extension_subset_path = ''
     settings.lasot_path = 'E:\Data\LaSOT'
-    settings.network_path = 'D:\Learning\GitRepository\Clone\pytracking\pytracking/networks/'    # Where tracking networks are stored.
+    settings.network_path = 'D:\Learning\GitRepository\Clone\mm2022_lr\pytracking/networks/'    # Where tracking networks are stored.
     settings.nfs_path = ''
     settings.otb_path = ''
     settings.oxuva_path = ''
-    settings.result_plot_path = 'D:\Learning\GitRepository\Clone\pytracking\pytracking/result_plots/'
-    settings.results_path = 'D:\Learning\GitRepository\Clone\pytracking\pytracking/tracking_results/'    # Where to store tracking results
-    settings.segmentation_path = 'D:\Learning\GitRepository\Clone\pytracking\pytracking/segmentation_results/'
+    settings.result_plot_path = 'D:\Learning\GitRepository\Clone\mm2022_lr\pytracking/result_plots/'
+    settings.results_path = 'D:\Learning\GitRepository\Clone\mm2022_lr\pytracking/tracking_results/'    # Where to store tracking results
+    settings.segmentation_path = 'D:\Learning\GitRepository\Clone\mm2022_lr\pytracking/segmentation_results/'
     settings.tn_packed_results_path = ''
     settings.tpl_path = ''
     settings.trackingnet_path = ''

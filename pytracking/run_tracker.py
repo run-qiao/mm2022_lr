@@ -50,7 +50,7 @@ def main():
     parser.add_argument('--use_visdom', type=bool, default=False, help='Flag to enable visdom.')
     parser.add_argument('--visdom_server', type=str, default='127.0.0.1', help='Server for visdom.')
     parser.add_argument('--visdom_port', type=int, default=8097, help='Port for visdom.')
-    parser.add_argument('--online_update', type=bool, default=True, help='Start Online Update.')
+    parser.add_argument('--online_update', type=bool, default=False, help='Start Online Update.')
     args = parser.parse_args()
 
     try:
