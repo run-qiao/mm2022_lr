@@ -5,7 +5,6 @@
 import numpy as np
 from sklearn.cluster import KMeans
 
-
 class VLAD():
 	def __init__(self, k=10):
 		self.k = k

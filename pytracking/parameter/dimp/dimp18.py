@@ -4,7 +4,7 @@ from pytracking.features.net_wrappers import NetWithBackbone
 def parameters():
     params = TrackerParams()
 
-    params.vit_checkpoint_pth = r'D:\Learning\GitRepository\Clone\pytracking\pytracking\networks\VIT_ep0080.pth.tar'
+    params.updater_checkpoint_pth = r'D:\Learning\GitRepository\Clone\mm2022_lr\pytracking\networks\BOXTRAINER_ep0020.pth.tar'
 
     params.debug = 0
     params.visualization = False

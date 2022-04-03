@@ -492,6 +492,6 @@ from pytracking.evaluation import get_dataset
 
 if __name__ == '__main__':
     dataset = get_dataset('vot')
-    trackers = [Tracker('transt', 'transt50')]
+    trackers = [Tracker('atom_lof', 'atom-lof-lasot')]
     print_results(trackers,dataset,'original')
     plot_results(trackers,dataset,'original')

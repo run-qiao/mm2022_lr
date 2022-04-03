@@ -10,13 +10,50 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="roi_pool">
-      <change afterPath="$PROJECT_DIR$/lib/models/updater/register.py" afterDir="false" />
+    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="fix and run experiment">
+      <change afterPath="$PROJECT_DIR$/lib/models/updater/head.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/metricnet/judge_metric_lof_fc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/metricnet/judge_metric_v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/metricnet/mdnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/metricnet/me_sample_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/metricnet/metric_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/atom_lof/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/atom_lof/atom-lof-lasot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/atom_lof/atom-lof-otb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/atom_lof/atom-lof-uav123.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/eco_lof/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/eco_lof/eco-lof-lasot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/eco_lof/eco-lof-otb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/eco_lof/eco-lof-uav123.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/siamrpn_updatenet/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/parameter/siamrpn_updatenet/default.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/atom_lof/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/atom_lof/atom_lof.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/atom_lof/atom_lof_noSim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/atom_lof/optim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/eco_lof/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/eco_lof/eco_lof.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/eco_lof/optim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/siamrpn_updatenet/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/siamrpn_updatenet/net_upd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/siamrpn_updatenet/run_SiamRPN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/siamrpn_updatenet/run_SiamRPN_upd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/siamrpn_updatenet/siamrpn_updatenet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/siamrpn_updatenet/updatenet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytracking/tracker/siamrpn_updatenet/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/models/update_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/update_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/models/updater/cluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/updater/cluster.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/updater/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/updater/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/updater/vlad.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/updater/vlad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/analysis/plot_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/analysis/plot_results.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytracking/evaluation/votdataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/votdataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/dimp/dimp18.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/parameter/dimp/dimp18.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/keep_track/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/parameter/keep_track/default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/keep_track/default_fast.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/parameter/keep_track/default_fast.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytracking/parameter/transt/transt50.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/parameter/transt/transt50.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pytracking/run_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/run_tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,24 +82,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/models/updater" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pytracking/networks" />
     <property name="python.debugger.dataview.coloredbydefault" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Learning\GitRepository\Clone\pytracking\lib\models\updater" />
-      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\external" />
-      <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking\networks" />
-      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models" />
-      <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models\loss" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking\networks" />
       <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\train_settings" />
       <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models\loss" />
       <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models" />
       <recent name="D:\Learning\GitRepository\Clone\pytracking\ltr\models\backbone" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking\networks" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking\tracker" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking\parameter" />
+      <recent name="D:\Learning\GitRepository\Clone\pytracking\pytracking\tracker\siamrpn_updatenet" />
     </key>
   </component>
   <component name="RunManager" selected="Python.run_tracker">
@@ -179,8 +216,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_tracker" />
-        <item itemvalue="Python.plot_results" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.plot_results" />
         <item itemvalue="Python.update_model" />
         <item itemvalue="Python.functional" />
       </list>
@@ -202,7 +239,10 @@
       <workItem from="1647856300042" duration="126605000" />
       <workItem from="1648609353898" duration="67438000" />
       <workItem from="1648724675493" duration="20514000" />
-      <workItem from="1648791573854" duration="15067000" />
+      <workItem from="1648791573854" duration="31994000" />
+      <workItem from="1648916331493" duration="1808000" />
+      <workItem from="1648961099473" duration="583000" />
+      <workItem from="1648961874710" duration="1166000" />
     </task>
     <task id="LOCAL-00001" summary="LSHash fine">
       <created>1648701544269</created>
@@ -239,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648798188974</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix and run experiment">
+      <created>1648827260299</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648827260299</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,49 +313,50 @@
     <MESSAGE value="hard fix" />
     <MESSAGE value="pca decompose" />
     <MESSAGE value="roi_pool" />
-    <option name="LAST_COMMIT_MESSAGE" value="roi_pool" />
+    <MESSAGE value="fix and run experiment" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix and run experiment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648714594694">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="440" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1549.831@0.0.1549.831" timestamp="1648714594694" />
-    <state width="1547" height="158" key="DebuggerActiveHint" timestamp="1648714266534">
+    <state width="1547" height="158" key="DebuggerActiveHint" timestamp="1648880249839">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1547" height="158" key="DebuggerActiveHint/0.0.1549.831@0.0.1549.831" timestamp="1648714266534" />
-    <state width="1496" height="221" key="GridCell.Tab.0.bottom" timestamp="1648826817049">
+    <state width="1547" height="158" key="DebuggerActiveHint/0.0.1549.831@0.0.1549.831" timestamp="1648880249839" />
+    <state width="1496" height="258" key="GridCell.Tab.0.bottom" timestamp="1648918729553">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="221" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648826817049" />
-    <state width="1496" height="221" key="GridCell.Tab.0.center" timestamp="1648826817049">
+    <state width="1496" height="258" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648918729553" />
+    <state width="1496" height="258" key="GridCell.Tab.0.center" timestamp="1648918729553">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="221" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1648826817049" />
-    <state width="1496" height="221" key="GridCell.Tab.0.left" timestamp="1648826817049">
+    <state width="1496" height="258" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1648918729553" />
+    <state width="1496" height="258" key="GridCell.Tab.0.left" timestamp="1648918729553">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="221" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1648826817049" />
-    <state width="1496" height="221" key="GridCell.Tab.0.right" timestamp="1648826817049">
+    <state width="1496" height="258" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1648918729553" />
+    <state width="1496" height="258" key="GridCell.Tab.0.right" timestamp="1648918729553">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="221" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1648826817049" />
-    <state width="1496" height="270" key="GridCell.Tab.1.bottom" timestamp="1648826564073">
+    <state width="1496" height="258" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1648918729553" />
+    <state width="1496" height="258" key="GridCell.Tab.1.bottom" timestamp="1648918729553">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="270" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648826564073" />
-    <state width="1496" height="270" key="GridCell.Tab.1.center" timestamp="1648826564073">
+    <state width="1496" height="258" key="GridCell.Tab.1.bottom/0.0.1549.831@0.0.1549.831" timestamp="1648918729553" />
+    <state width="1496" height="258" key="GridCell.Tab.1.center" timestamp="1648918729553">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="270" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1648826564073" />
-    <state width="1496" height="270" key="GridCell.Tab.1.left" timestamp="1648826564073">
+    <state width="1496" height="258" key="GridCell.Tab.1.center/0.0.1549.831@0.0.1549.831" timestamp="1648918729553" />
+    <state width="1496" height="258" key="GridCell.Tab.1.left" timestamp="1648918729553">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="270" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1648826564073" />
-    <state width="1496" height="270" key="GridCell.Tab.1.right" timestamp="1648826564073">
+    <state width="1496" height="258" key="GridCell.Tab.1.left/0.0.1549.831@0.0.1549.831" timestamp="1648918729553" />
+    <state width="1496" height="258" key="GridCell.Tab.1.right" timestamp="1648918729553">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state width="1496" height="270" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1648826564073" />
+    <state width="1496" height="258" key="GridCell.Tab.1.right/0.0.1549.831@0.0.1549.831" timestamp="1648918729553" />
     <state x="95" y="0" key="SettingsEditor" timestamp="1648724690101">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
@@ -326,11 +374,33 @@
     </state>
     <state x="538" y="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1549.831@0.0.1549.831" timestamp="1648724725601" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pytracking/evaluation/tracker.py</url>
+          <line>665</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pytracking/tracker/dimp/dimp.py</url>
+          <line>175</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pytracking/tracker/dimp/dimp.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pytracking$test.coverage" NAME="test Coverage Results" MODIFIED="1648727376302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pytracking$test.coverage" NAME="test Coverage Results" MODIFIED="1648916860671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pytracking$update_model.coverage" NAME="update_model Coverage Results" MODIFIED="1648655271417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/models" />
     <SUITE FILE_PATH="coverage/pytracking$functional.coverage" NAME="functional Coverage Results" MODIFIED="1647789297822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ltr/external/PreciseRoIPooling/pytorch/prroi_pool" />
-    <SUITE FILE_PATH="coverage/pytracking$run_tracker.coverage" NAME="run_tracker Coverage Results" MODIFIED="1648826817044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking" />
-    <SUITE FILE_PATH="coverage/pytracking$plot_results.coverage" NAME="plot_results Coverage Results" MODIFIED="1648737261360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking/analysis" />
+    <SUITE FILE_PATH="coverage/pytracking$run_tracker.coverage" NAME="run_tracker Coverage Results" MODIFIED="1648887244601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking" />
+    <SUITE FILE_PATH="coverage/mm2022_lr$run_tracker.coverage" NAME="run_tracker Coverage Results" MODIFIED="1648962372512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking" />
+    <SUITE FILE_PATH="coverage/pytracking$plot_results.coverage" NAME="plot_results Coverage Results" MODIFIED="1648887684483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pytracking/analysis" />
   </component>
 </project>

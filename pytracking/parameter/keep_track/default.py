@@ -6,6 +6,7 @@ def parameters():
 
     params.debug = 0
     params.visualization = False
+    params.updater_checkpoint_pth = r'D:\Learning\GitRepository\Clone\mm2022_lr\pytracking\networks\BOXTRAINER_ep0020.pth.tar'
 
     params.use_gpu = True
 

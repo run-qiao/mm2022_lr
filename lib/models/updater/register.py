@@ -3,11 +3,14 @@
 # file    : register.py
 # Copyright (c) Skye-Song. All Rights Reserved
 import torch
+import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 import math
 from einops import rearrange
 from lib.utils.image import *
+from .head import build_box_head
+from lib.utils.box_ops import box_xyxy_to_cxcywh, box_xywh_to_xyxy
 
 
 class Register():
@@ -148,5 +151,111 @@ class Register():
 		return return_box
 
 
-def build_register(cfg):
-	return Register()
+class Register_ST(nn.Module):
+	def __init__(self, patch_size=16, feature_size=224):
+		super().__init__()
+		self.patch_size = patch_size
+		self.feature_size = feature_size
+		self.box_head = build_box_head()
+		self._reset_parameters()
+
+	def _reset_parameters(self):
+		for p in self.box_head.parameters():
+			if p.dim() > 1:
+				nn.init.xavier_uniform_(p)
+
+	def _add_mask(self, features, masks):
+
+		# return features
+		# features=[b, t, p, n], p = h * w
+		# masks = [b, t, feature_size, feautre_size]
+		if len(features.shape) == 2:
+			features = features.unsqueeze(0)
+		if len(masks.shape) == 2:
+			masks = masks.unsqueeze(0)
+
+		[b, t, p, n] = features.shape
+		if p != self.feature_size * self.feature_size:
+			masks = F.interpolate(masks.float(), size=self.feature_size // self.patch_size,
+			                      mode='bilinear')
+
+		return features * (1 - masks.flatten(2).unsqueeze(-1))
+
+	def _score_map(self, features, masks, match_feature):
+		# features=[b, t, p, n], match_feaure = [b, p, n];
+		# masks = [b, t, feature_size, feautre_size]
+		# n = patch_size * patch_size; p = number of patch
+
+		# score
+		b, t, p, n = features.shape
+		masked_features = self._add_mask(features, masks)  # b, t, p, n
+		mfeature = match_feature.transpose(-2, -1)  # b * n * p
+
+		masked_features = rearrange(masked_features, 'b t p n -> b (t p) n')  # b * tp * n
+		score = masked_features @ mfeature  # b * tp * p
+		score = score / math.sqrt(n)
+		score = torch.softmax(score, dim=1)
+
+		out_feat1 = masked_features.transpose(-2, -1) @ score  # b * n * p
+		out_feat = torch.cat([out_feat1, mfeature], dim=1)
+		out_feat = rearrange(out_feat, 'b n (h w) -> b n h w', h=self.feature_size // self.patch_size)
+		return out_feat
+
+	def map_box_back(self, pred_box: list, resize_factor: float):
+		cx_prev, cy_prev = self.state[0] + 0.5 * self.state[2], self.state[1] + 0.5 * self.state[3]
+		cx, cy, w, h = pred_box
+		half_side = 0.5 * self.params.search_size / resize_factor
+		cx_real = cx + (cx_prev - half_side)
+		cy_real = cy + (cy_prev - half_side)
+		return [cx_real - 0.5 * w, cy_real - 0.5 * h, w, h]
+
+	# for test
+	def _refine_box(self, prev_box, boxs):
+		x, y, w, h = prev_box
+		cx_prev = x + 0.5 * w
+		cy_prev = y + 0.5 * h
+
+		boxs = boxs.view(-1, 4)  # [x1,y1,x2,y2]
+
+		# get the absolute coordinate
+		crop_size = math.ceil(math.sqrt(w * h) * 2.0)
+		boxs = (boxs * crop_size).tolist()  # [x1,y1,x2,y2]
+
+		# map to real coordinate
+		r_x1, r_y1, r_x2, r_y2 = boxs[0]
+		r_x = r_x1 + (cx_prev - 0.5 * crop_size)
+		r_y = r_y1 + (cy_prev - 0.5 * crop_size)
+
+		return [r_x, r_y, r_x2 - r_x1, r_y2 - r_y1]
+
+	# outputs_coord = box_xyxy_to_xywh(box)
+
+	def forward(self, features, masks, box=None, map_box=True):
+		pre_features = features[:-1]
+		pre_masks = masks[:-1]
+		feature = features[-1]
+		mask = masks[-1]
+
+		if map_box:
+			pre_features = torch.Tensor(pre_features).unsqueeze(0).cuda()
+			pre_masks = torch.stack(pre_masks, dim=0).unsqueeze(0).cuda()
+			feature = torch.Tensor(feature).unsqueeze(0).cuda()
+		else:
+			pre_features = torch.stack(pre_features, dim=1).cuda()
+			pre_masks = torch.stack(pre_masks, dim=1).cuda()
+			feature = feature
+
+		# draw_feat(rearrange(features[4], '(h w) c -> h w c', h=14))
+
+		feat = self._score_map(pre_features, pre_masks, feature)  # b * n * h * w
+
+		return_box = self.box_head(feat)  # b * n * 4
+
+		if map_box:
+			return_box = self._refine_box(box, return_box)
+
+		return return_box
+
+
+def build_register(cfg=None):
+	return Register_ST()
