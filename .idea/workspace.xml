@@ -10,12 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/update_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/update_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/evaluation/running.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/evaluation/running.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytracking/run_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytracking/run_tracker.py" afterDir="false" />
+    <list default="true" id="b3d42772-4880-45f9-a51e-727bfa8538c8" name="Default Changelist" comment="make extention result">
+      <change beforePath="$PROJECT_DIR$/lib/models/updater/cluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/updater/cluster.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +200,7 @@
       <workItem from="1648791573854" duration="31994000" />
       <workItem from="1648916331493" duration="1808000" />
       <workItem from="1648961099473" duration="583000" />
-      <workItem from="1648961874710" duration="3936000" />
+      <workItem from="1648961874710" duration="4103000" />
     </task>
     <task id="LOCAL-00001" summary="LSHash fine">
       <created>1648701544269</created>
@@ -255,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648963056252</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="make extention result">
+      <created>1648969013837</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648969013837</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +287,8 @@
     <MESSAGE value="roi_pool" />
     <MESSAGE value="fix and run experiment" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="make extention result" />
+    <option name="LAST_COMMIT_MESSAGE" value="make extention result" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648714594694">
@@ -331,10 +335,10 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="95" y="0" key="SettingsEditor/0.0.1549.831@0.0.1549.831" timestamp="1648724690101" />
-    <state x="249" y="95" key="Vcs.Push.Dialog.v2" timestamp="1648963065531">
+    <state x="249" y="95" key="Vcs.Push.Dialog.v2" timestamp="1648969018577">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
-    <state x="249" y="95" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1648963065531" />
+    <state x="249" y="95" key="Vcs.Push.Dialog.v2/0.0.1549.831@0.0.1549.831" timestamp="1648969018577" />
     <state width="781" height="422" key="XDebugger.FullValuePopup" timestamp="1648696156450">
       <screen x="0" y="0" width="1549" height="831" />
     </state>

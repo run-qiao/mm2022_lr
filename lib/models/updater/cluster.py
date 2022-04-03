@@ -10,7 +10,7 @@ import torch
 from lshash.lshash import LSHash
 
 class KMeansCluster():
-	def __init__(self, start_len=10, feature_bank_size=100, score_bank_size=30, max_components=5, start_components=1,
+	def __init__(self, start_len=10, feature_bank_size=100, score_bank_size=30, max_components=5, start_components=2,
 	             main_cluster_num=5, cluster_thres=1.8):
 
 		self.start_components = start_components
